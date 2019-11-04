@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Authors>Fabian Ramos R</Authors>
+    <Product>RDHash Library</Product>
+    <Description>Simple, customizable and lightweight hashing algorithm for generating short variable-sized hashes that are human readable and easy to transmit over phone or other non-digital media</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>RDHashCore.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\RDHash\CircularBuffer.cs" Link="CircularBuffer.cs" />
+    <Compile Include="..\RDHash\EncodingWheel.cs" Link="EncodingWheel.cs" />
+    <Compile Include="..\RDHash\GlyphCollection.cs" Link="GlyphCollection.cs" />
+    <Compile Include="..\RDHash\HashingResults.cs" Link="HashingResults.cs" />
+    <Compile Include="..\RDHash\RDHasher.cs" Link="RDHasher.cs" />
+  </ItemGroup>
+
+</Project>
